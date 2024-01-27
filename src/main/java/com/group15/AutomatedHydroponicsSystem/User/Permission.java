@@ -3,7 +3,7 @@ package com.group15.AutomatedHydroponicsSystem.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@Getter
+
 @RequiredArgsConstructor
 public enum Permission {
     ADMIN_READ("admin:read"),
@@ -14,6 +14,6 @@ public enum Permission {
     MANAGER_UPDATE("manager:update"),
     MANAGER_CREATE("manager:create"),
     MANAGER_DELETE("manager:delete");
-
+    @Getter
     private final String permission;
 }

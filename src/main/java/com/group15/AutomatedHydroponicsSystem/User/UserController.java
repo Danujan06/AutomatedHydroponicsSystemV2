@@ -3,6 +3,7 @@ package com.group15.AutomatedHydroponicsSystem.User;
 import com.group15.AutomatedHydroponicsSystem.Exception.PlantNotFoundException;
 import com.group15.AutomatedHydroponicsSystem.Exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.Optional;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1/auth")
+//@PreAuthorize("hasRole('ADMIN')")
 public class UserController {
     @Autowired
     private  UserRepository userRepository;
@@ -20,7 +22,7 @@ public class UserController {
         return userRepository.findAll();
     }
 
-
+    
     @GetMapping("/users/{id}")
     public Optional<User> getUserById(@PathVariable Integer id){
         return Optional.ofNullable(userRepository.findById(id)

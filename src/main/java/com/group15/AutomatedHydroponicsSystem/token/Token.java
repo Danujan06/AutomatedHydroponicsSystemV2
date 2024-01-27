@@ -26,7 +26,7 @@ public class Token {
 
 
     @ManyToOne //Many tokens can be belonged to one user
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id")  // user_id is the one collabarating with the token columns
     private User user;
 
 }

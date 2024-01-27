@@ -19,7 +19,6 @@ public class HydroponicsSystem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int systemId;
     private String name;
-    private String userName;
     private String email;
 
 }

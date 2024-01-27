@@ -1,6 +1,7 @@
 package com.group15.AutomatedHydroponicsSystem.User;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Collections;
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
 import static com.group15.AutomatedHydroponicsSystem.User.Permission.*;
 
 @Getter
+@RequiredArgsConstructor
 public enum Role {
 
     USER(Collections.emptySet()), // USER have no roles
@@ -34,12 +36,12 @@ public enum Role {
                     MANAGER_DELETE
             )
     );
-
+    @Getter
     private final Set<Permission> permissions;
 
-    Role(Set<Permission> permissions){
+    /*Role(Set<Permission> permissions){
         this.permissions = permissions;
-    }
+    }*/
 
     public List<SimpleGrantedAuthority> getAuthorities(){
         var authorities = getPermissions()

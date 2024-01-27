@@ -30,7 +30,7 @@ public class HydroponicsSystemService {
         if (optionalSystem.isPresent()) {
             HydroponicsSystem existingSystem = optionalSystem.get();
             existingSystem.setName(updatedSystem.getName());
-            existingSystem.setUserName(updatedSystem.getUserName());
+            //existingSystem.setUserName(updatedSystem.getUserName());
             existingSystem.setEmail(updatedSystem.getEmail());
             return systemRepository.save(existingSystem);
         } else {

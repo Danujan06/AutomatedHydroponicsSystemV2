@@ -2,10 +2,7 @@ package com.group15.AutomatedHydroponicsSystem.User;
 
 import com.group15.AutomatedHydroponicsSystem.token.Token;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,6 +21,7 @@ public class User implements UserDetails, UserDetailsNew {
     @Id // To indicate the primary key
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
+    @Getter
     private String firstname;
     private String lastname;
     private String email;
@@ -76,6 +74,5 @@ public class User implements UserDetails, UserDetailsNew {
     public Role getRole() {
         return role;
     }
-
 
 }
