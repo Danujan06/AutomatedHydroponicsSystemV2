@@ -22,10 +22,10 @@ public class AutomatedHydroponicsSystemApplication {
 //	){
 //		return args -> {
 //			var admin = RegisterRequest.builder()
-//					.firstname("Admin")
-//					.lastname("Admin")
-//					.email("admin@mail.com")
-//					.password("password")
+//					.firstname("Danujan")
+//					.lastname("Sivasundaralingam")
+//					.email("admin06@mail.com")
+//					.password("Hello")
 //					.role(Role.ADMIN)
 //					.build();
 //            try {
@@ -37,7 +37,7 @@ public class AutomatedHydroponicsSystemApplication {
 //            var manager = RegisterRequest.builder()
 //					.firstname("MANAGER")
 //					.lastname("MANAGER")
-//					.email("manager@mail.com")
+//					.email("manager06@mail.com")
 //					.password("password")
 //					.role(Role.MANAGER)
 //					.build();
